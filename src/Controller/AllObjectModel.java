@@ -1,10 +1,16 @@
 package Controller;
-
-import Model.*;
+import Model.AdminModelInterface;
+import Model.AdminModelInterfaceimpl;
+import Model.AnggotaModelInterface;
+import Model.AnggotaModelInterfaceimpl;
+import Model.BukuModelInterface;
+import Model.BukuModelInterfaceimpl;
+import Model.PeminjamanModelInterface;
+import Model.PeminjamanModelInterfaceimpl;
 
 public class AllObjectModel {
-    public static AdminModelInterface adminModel = new AdminModelInterfaceImpl(); //polymorpishm dinamis
-    public static AnggotaModelInterface anggotaModel = new AnggotaModelInterfaceImpl();
-    public static BukuModelInterface bukuModel = new BukuModelInterfaceImpl();
-    public static PeminjamanModelInterface peminjamanModel = new PeminjamanModelInterfaceImpl();
+    public static AdminModelInterface adminModel = new AdminModelInterfaceimpl();
+    public static AnggotaModelInterface anggotaModel = new AnggotaModelInterfaceimpl();
+    public static BukuModelInterface bukuModel = new BukuModelInterfaceimpl();
+    public static PeminjamanModelInterface peminjamanModel = new PeminjamanModelInterfaceimpl();
 }

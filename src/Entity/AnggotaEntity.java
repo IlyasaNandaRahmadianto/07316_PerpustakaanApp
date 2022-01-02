@@ -3,40 +3,26 @@ package Entity;
 public class AnggotaEntity extends UserAbstractEntity {
     private String noTelp;
     private String alamat;
-    private int  id;
+    private int id;
 
-    public AnggotaEntity(String nama, String password, String noTelp, String alamat) {
+    public AnggotaEntity(String nama, String password,String noTelp, String alamat) {
         super(nama, password);
         this.noTelp = noTelp;
         this.alamat = alamat;
     }
-
     public AnggotaEntity(String nama, String password) {
         super(nama, password);
-    }
-
-    public String getNoTelp() {
+    }public String getNoTelp() {
         return noTelp;
-    }
-
-    public void setNoTelp(String noTelp) {
+    }public void setNoTelp(String noTelp) {
         this.noTelp = noTelp;
-    }
-
-    public String getAlamat() {
+    }public String getAlamat() {
         return alamat;
-    }
-
-    public void setAlamat(String alamat) {
+    }public void setAlamat(String alamat) {
         this.alamat = alamat;
-    }
-
-    public int getId() {
+    }public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
+    }public void setId(int id) {
         this.id = id;
     }
- 
 }
