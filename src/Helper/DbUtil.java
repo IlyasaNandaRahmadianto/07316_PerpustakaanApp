@@ -12,10 +12,10 @@ public class DbUtil {
         try{
             Class.forName(driver);
             conn=DriverManager.getConnection(url, user, pass);
-            System.out.println("Berhasil Tersambung");
+            System.out.println("Connected");
         }
         catch(Exception e){
-             System.out.println("Tidak Tersambung");
+             System.out.println("Disconnected");
              e.printStackTrace();
         }
         return conn;

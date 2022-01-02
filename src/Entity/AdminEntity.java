@@ -5,9 +5,13 @@ public class AdminEntity extends UserAbstractEntity {
 
     public AdminEntity(String nama, String password) {
         super(nama, password);
-    }public int getId() {
+    }
+    
+    public int getId() {
         return id;
-    }public void setId(int id) {
+    }
+    
+    public void setId(int id) {
         this.id = id;
     }
 }

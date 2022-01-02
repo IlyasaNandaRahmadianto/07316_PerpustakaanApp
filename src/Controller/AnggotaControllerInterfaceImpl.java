@@ -23,12 +23,16 @@ public class AnggotaControllerInterfaceimpl implements AnggotaControllerInterfac
     }
     @Override
     public void updateAkun(int pilihan, String data, int id) {
-        if (pilihan == 1){
+        switch(pilihan){
+            case 1:
             AllObjectModel.anggotaModel.updatePassword(data, id);
-        }else if (pilihan == 2){
+            break;
+            case 2:
             AllObjectModel.anggotaModel.updateAlamat(data, id);
-        }else if (pilihan == 3){
+            break;
+            case 3:
             AllObjectModel.anggotaModel.updateNoTelp(data, id);
+            break;
         }
     }   
 }

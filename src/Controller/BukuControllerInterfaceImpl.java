@@ -20,16 +20,21 @@ public class BukuControllerInterfaceimpl implements BukuControllerInterface {
     }
     @Override
     public void updateBuku(int pilihan, String data, String isbn) {
-      if(pilihan == 1){
+      switch(pilihan){
+        case 1:
         AllObjectModel.bukuModel.updateJudul(data, isbn);
-      }else if(pilihan == 2){
+        break;
+        case 2:
         AllObjectModel.bukuModel.updatePenerbit(data, isbn);
+        break;
       }
     }
+    
     @Override
     public ArrayList<BukuEntity> showAllData() {
         return AllObjectModel.bukuModel.getAll();
     }
+    
     @Override
     public BukuEntity getData(String isbn) {
         return AllObjectModel.bukuModel.getById(isbn); 
