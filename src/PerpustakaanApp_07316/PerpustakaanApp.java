@@ -1,14 +1,6 @@
 package PerpustakaanApp_07316;
-import Controller.AdminControllerInterface;
-import Controller.AdminControllerInterfaceimpl;
-import Controller.AnggotaControllerInterface;
-import Controller.AnggotaControllerInterfaceimpl;
-import Controller.BukuControllerInterface;
-import Controller.BukuControllerInterfaceimpl;
-import Controller.PeminjamanControllerInterface;
-import Controller.PeminjamanControllerInterfaceimpl;
-import Entity.AnggotaEntity;
-import Entity.BukuEntity;
+import Controller.*;
+import Entity.*;
 import java.util.Scanner;
 
 public class PerpustakaanApp {
@@ -193,7 +185,7 @@ public class PerpustakaanApp {
         System.out.print("Penerbit Buku        : ");
         String penerbit = input.next();
         penerbit += input.nextLine();
-        System.out.print("Jumblah Halaman Buku : ");
+        System.out.print("Jumlah Halaman Buku : ");
         int halaman = input.nextInt();
         System.out.print("Tahun Terbit Buku    : ");
         int tgl = input.nextInt();
@@ -313,21 +305,25 @@ public class PerpustakaanApp {
             System.out.println("4. Keluar");
             System.out.print("Pilih : ");
             pilih = input.nextInt();
-            if(pilih == 1){
+            switch(pilih){
+                case 1:
                 dataPenggunaById(id);
                 System.out.print("Password Baru : ");
                 String password = input.next();
                 anggotaController.updateAkun(1, password, id);
-            }else if(pilih == 2){
+                break;
+                case 2:
                 dataPenggunaById(id);
                 System.out.print("Ubah Alamat : ");
                 String alamat = input.next();
                 anggotaController.updateAkun(2, alamat, id);
-            }else if(pilih == 3){
+                break;
+                case 3:
                 dataPenggunaById(id);
                 System.out.print("Ubah No Telp : ");
                 String noTelp = input.next();
                 anggotaController.updateAkun(3, noTelp, id);
+                break;
             }
         }while(pilih < 4);
 
